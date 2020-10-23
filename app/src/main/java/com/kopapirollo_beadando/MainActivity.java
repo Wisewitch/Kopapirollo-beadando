@@ -171,6 +171,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void UjJatek() {
+        tv_res.setText("Döntetlenek száma: 0");
+        en_elet = 3;
+        gep_elet = 3;
+        dontetlen = 0;
+        imageHp1.setImageResource(R.drawable.heart2);
+        imageHp2.setImageResource(R.drawable.heart2);
+        imageHp3.setImageResource(R.drawable.heart2);
+        imageHp4.setImageResource(R.drawable.heart2);
+        imageHp5.setImageResource(R.drawable.heart2);
+        imageHp6.setImageResource(R.drawable.heart2);
+    }
 
 
 
