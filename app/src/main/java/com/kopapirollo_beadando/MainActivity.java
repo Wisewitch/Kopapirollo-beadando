@@ -59,37 +59,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    private void GepEletLevon(int gep_elet) {
-        switch (gep_elet) {
-            case 3:
-                imageHp3.setImageResource(R.drawable.heart1);
-                break;
-            case 2:
-                imageHp2.setImageResource(R.drawable.heart1);
-                break;
-            case 1:
-                imageHp1.setImageResource(R.drawable.heart1);
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void EnEletLevon(int en_elet) {
-        switch (en_elet) {
-            case 3:
-                imageHp6.setImageResource(R.drawable.heart1);
-                break;
-            case 2:
-                imageHp5.setImageResource(R.drawable.heart1);
-                break;
-            case 1:
-                imageHp4.setImageResource(R.drawable.heart1);
-                break;
-            default:
-                break;
-        }
-    }
 
 
     private void GepRandom() {
@@ -113,46 +82,75 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void GepEletLevon(int gep_elet) {
+        switch (gep_elet) {
+            case 3:
+                imageHp3.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                imageHp2.setImageResource(R.drawable.heart1);
+                break;
+            case 1:
+                imageHp1.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
+    }
 
 
-
+    private void EnEletLevon(int en_elet) {
+        switch (en_elet) {
+            case 3:
+                imageHp6.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                imageHp5.setImageResource(R.drawable.heart1);
+                break;
+            case 1:
+                imageHp4.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
+    }
 
 
     public void Calculate() {
 
         if (EnValasztom.equals("Kő") && GepValaszt.equals("Papir")) {
             result = "Vesztettél!!";
-           // EnEletLevon(en_elet);
+            EnEletLevon(en_elet);
             en_elet--;
         }
 
         else if (EnValasztom.equals("Kő") && GepValaszt.equals("Olló")) {
             result = "Nyertél!!";
-           GepEletLevon(gep_elet);
+            GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Papír") && GepValaszt.equals("Kő")) {
             result = "Nyertél!!";
-           GepEletLevon(gep_elet);
+            GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Papír") && GepValaszt.equals("Olló")) {
             result = "Vesztettél!!";
-          EnEletLevon(en_elet);
+            EnEletLevon(en_elet);
             en_elet--;
         }
 
         else if (EnValasztom.equals("Olló") && GepValaszt.equals("Papír")) {
             result = "Nyertél!!";
-         GepEletLevon(gep_elet);
+            GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Olló") && GepValaszt.equals("Kő")) {
             result = "Vesztettél!!";
-           EnEletLevon(en_elet);
+            EnEletLevon(en_elet);
             en_elet--;
         }
 
@@ -175,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
-       Vege();
+        Vege();
     }
 
 
@@ -189,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                         UjJatek();
+                            UjJatek();
                         }
                     })
                     .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
@@ -201,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
             builder.create().show();
         }
     }
+
 
     private void UjJatek() {
         tv_res.setText("Döntetlenek száma: 0");
@@ -214,7 +213,6 @@ public class MainActivity extends AppCompatActivity {
         imageHp5.setImageResource(R.drawable.heart2);
         imageHp6.setImageResource(R.drawable.heart2);
     }
-
 
 
     private void init() {
