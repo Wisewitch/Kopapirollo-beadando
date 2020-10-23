@@ -9,7 +9,8 @@
 
     <include
         layout="@layout/eletek"
-        android:id="@+id/include">
+        android:id="@+id/include"
+        >
     </include>
 
     <include
