@@ -59,6 +59,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    private void GepEletLevon(int gep_elet) {
+        switch (gep_elet) {
+            case 3:
+                imageHp3.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                imageHp2.setImageResource(R.drawable.heart1);
+                break;
+            case 1:
+                imageHp1.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void EnEletLevon(int en_elet) {
+        switch (en_elet) {
+            case 3:
+                imageHp6.setImageResource(R.drawable.heart1);
+                break;
+            case 2:
+                imageHp5.setImageResource(R.drawable.heart1);
+                break;
+            case 1:
+                imageHp4.setImageResource(R.drawable.heart1);
+                break;
+            default:
+                break;
+        }
+    }
 
 
     private void GepRandom() {
@@ -97,31 +128,31 @@ public class MainActivity extends AppCompatActivity {
 
         else if (EnValasztom.equals("Kő") && GepValaszt.equals("Olló")) {
             result = "Nyertél!!";
-           // GepEletLevon(gep_elet);
+           GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Papír") && GepValaszt.equals("Kő")) {
             result = "Nyertél!!";
-         //   GepEletLevon(gep_elet);
+           GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Papír") && GepValaszt.equals("Olló")) {
             result = "Vesztettél!!";
-            //EnEletLevon(en_elet);
+          EnEletLevon(en_elet);
             en_elet--;
         }
 
         else if (EnValasztom.equals("Olló") && GepValaszt.equals("Papír")) {
             result = "Nyertél!!";
-          //  GepEletLevon(gep_elet);
+         GepEletLevon(gep_elet);
             gep_elet--;
         }
 
         else if (EnValasztom.equals("Olló") && GepValaszt.equals("Kő")) {
             result = "Vesztettél!!";
-          //  EnEletLevon(en_elet);
+           EnEletLevon(en_elet);
             en_elet--;
         }
 
