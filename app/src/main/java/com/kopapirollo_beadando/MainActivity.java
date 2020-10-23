@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                     .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                         //  UjJatek();
+                         UjJatek();
                         }
                     })
                     .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
