@@ -144,11 +144,32 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
-       // Vege();
+       Vege();
     }
 
 
+    private void Vege() {
 
+        if (en_elet == 0 || gep_elet == 0) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("A játék véget ért.");
+
+            builder.setCancelable(false).setMessage("Szeretne új játékot játszani?")
+                    .setPositiveButton("Igen", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                         //  UjJatek();
+                        }
+                    })
+                    .setNegativeButton("Nem", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            System.exit(0);
+                        }
+                    });
+            builder.create().show();
+        }
+    }
 
 
 
