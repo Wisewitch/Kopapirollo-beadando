@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="3sp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Döntetlenek száma: 0"
+        android:textSize="27sp"
+        android:id="@+id/tv_res"
+        android:layout_marginTop="70sp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_gep"
+        android:layout_height="105sp"
+        android:layout_width="105sp"
+        android:src="@drawable/rock"
+        android:layout_marginTop="25sp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_gep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A gép választása"
+        android:textSize="27sp" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_en"
+        android:layout_height="105sp"
+        android:layout_width="105sp"
+        android:src="@drawable/rock"
+        android:layout_marginTop="25sp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A te választásod"
+        android:textSize="27sp" >
+    </TextView>
+
+</LinearLayout>
